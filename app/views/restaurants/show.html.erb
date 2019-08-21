@@ -4,8 +4,6 @@
 <%= @restaurant.category %>
 </p>
 
-<%= link_to "add a new review", new_restaurant_review_path(@restaurant) %>
-
 <ol>
   <% @restaurant.reviews.each do |review| %>
       <li>
@@ -15,3 +13,5 @@
   <% end %>
 </ol>
 
+<%= link_to "add a new review", new_restaurant_review_path(@restaurant) %>|
+<%= link_to "back to all", restaurants_path %>
