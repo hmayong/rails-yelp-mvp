@@ -28,7 +28,7 @@ restaurants_attributes = [
   {
     name:         'Belgy',
     address:      'Clarke Quay',
-    category:     'belgium'
+    category:     'belgian'
   },
   {
     name:         'Tokio',
