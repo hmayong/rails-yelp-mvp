@@ -1,0 +1,23 @@
+<h1 class = "text-center">Add a new restaurant</h1>
+<!-- app/views/restaurants/_form.html.erb -->
+<%= simple_form_for(@restaurant, html: { class: 'w-50 mx-auto' }) do |f| %>
+  <% if @restaurant.errors.any? %>
+    <div class="errors-container">
+      <ul>
+        <% @restaurant.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!-- [...] all the fields -->
+  <%= f.input :name, label: false, placeholder: "Name" %>
+  <%= f.input :address, label: false, placeholder: "Address" %>
+  <%= f.input :phone_number, label: false, placeholder: "Phone Number" %>
+  <%= f.input :category, label: false, collection: ["chinese", "italian", "japanese", "french", "belgian"], prompt: "Select your category" %>
+  <%= f.submit "add a restaurant", class: "btn btn-primary" %>
+<% end %>
+
+
+
